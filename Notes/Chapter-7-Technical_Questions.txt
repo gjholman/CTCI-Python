@@ -1,0 +1,68 @@
+listen -> example -> brute force -> optimize -> walk through -> implement -> test
+
+1. Listen
+	- unique information (you probably need it)
+	- eg.
+		- sorted array
+			- optimal algorithm for sorted? use binary search?
+		- run repeatedly on server?
+			- probably going to cache data, or use preset data that would have to be run continuously
+			- as opposed to run-once algorithms
+2. Example
+	- Good examples
+		- not too small
+		- specific information (values or objects or trees or something)
+		- not a special case
+3. Brute Force
+	- Just fuckin write something. you can optimize it in a sec
+	- It's ok that it's bad.
+4. Optimize
+	- look for any unused information (sorted? leverage it.)
+	- fresh example, maybe you notice something new or a pattern evolve
+	- Time vs space tradeoff
+		- run on server or run once?
+	- precompute
+		- compute values upfront to save time in long run?
+	- hash table
+		- use it use it use it use it.
+		- use it dammit
+	- best conveivable runtiume
+	- BUD
+		- Bottlenecks
+		- Unnecessary work
+		- Duplicated work
+5. Walk Through
+	- Move it along. it's gonna be a little slow.
+	- use pseudocode that's not actually code like. brief logic or longer methods. not messy for loops
+	- Just... idk walk through it go go go
+6. Implement
+	- Beautiful code <3
+		- Modularized code. don't write out code for initializing when you can have a function do it! for example if you init a matrix as [[1 2 3], [4 5 6], ...] instead have {initIncrementalMatrix(size n)}
+		- Error checks. test things! look for outliers
+		- classes and structs where appropriate. if you're using coordinates then you may want to make simething like a coordinate struct and use a list or something
+		- good variable names. explain what it is. then use abbreviations but explain the abbreviations.
+	- If you get confused then go back to example
+7. Test
+	- conceptual test
+		- read and analyze each line of code and explain what you expect it to do
+	- weird looking code
+		- Maybe you did it for a reason. make sure to write that reason in case it doesn't apply anymore
+	- Hot spots
+		- Know what you do wrong and check those spots
+	- Special cases.
+		- Null, None, empty, 0, 1, single element, "" etc.
+	- Small test cases
+		- a few elements in the array, nothing too aggressive
+	- Don't make the first coorection you think!
+		- it may not be the best one
+		- i.e. arrayList - 2 or arrayList - i * 2
+
+Optimization
+	- Bottlenecks
+		- one-time work that slows your algorithm
+			- sort O(N logN) then find O(N)? it would be more efficient to get rid of or optimize the sorting because the algorithm is bottlenecked by sort O(N logN)
+		- Chunk of work done repeatedly
+			- reduce to O(N), O(logN), O(1)
+			- Hashhhhhhh tables
+
+
